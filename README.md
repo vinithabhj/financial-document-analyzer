@@ -119,15 +119,15 @@ The project was debugged and brought to full functionality. Fixes include:
 
 ---
 
-## 📸 Screenshots
+### 🖼️ Screenshots
 
-### 1. API Documentation
+**1. API Documentation**
 
-![API Docs](outputs/Screenshot (260).png)
+![API Docs](outputs/Screenshot%20(260).png)
 
-### 2. Analysis Results
+**2. Analysis Results**
 
-![Results](outputs/Screenshot (261).png)
+![Results](outputs/Screenshot%20(261).png)
 
 ---
 
