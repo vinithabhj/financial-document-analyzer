@@ -1,84 +1,133 @@
-# Financial Document Analyzer - Assignment Complete ✅
+# 📊 Financial Document Analyzer 
 
-## Project Overview
-A comprehensive financial document analysis system that processes corporate reports, financial statements, and investment documents using AI-powered analysis agents.
-The system now runs smoothly after debugging and includes secure API integration, correct task distribution, and optimized AI prompts.
+A comprehensive **financial document analysis system** that processes corporate reports, financial statements, and investment documents using **AI-powered analysis agents**.  
+The project has been fully debugged and now runs smoothly with secure API integration, correct task distribution, and optimized AI prompts.
 
 ---
 
-## Full Instructions & Details
+## 📝 Project Overview
+This system is designed to:
+- Upload financial documents (PDF format)  
+- Extract insights using multiple **specialist AI agents**  
+- Provide **investment recommendations**, **financial health checks**, and **risk assessments**
 
-```text
-Set Up Environment File
+---
 
-An API Key is required. In the project's root directory, create a new file named .env and add your Google AI API Key:
+## ⚙️ Tech Stack
+- **Python 3.11+**
+- **FastAPI** – Backend framework  
+- **Uvicorn** – ASGI server  
+- **CrewAI** – Multi-agent orchestration  
+- **Google Generative AI** – Document analysis  
+- **dotenv** – Secure API key management  
+- **PyPDF2** – PDF text extraction  
 
+---
+
+## 🚀 Setup & Installation
+
+### 1. Install Required Libraries
+```sh
+pip install -r requirements.txt
+````
+
+### 2. Set Up Environment File
+
+Create a `.env` file in the project root and add your Google AI API Key:
+
+```env
 GOOGLE_API_KEY="YOUR_REAL_API_KEY_HERE"
+```
 
+---
 
-Running the Application
+## ▶️ Running the Application
 
-Start the server from your terminal. The application will be available at http://127.0.0.1:8000.
+Start the server from your terminal:
 
+```sh
 uvicorn main:app --reload
+```
 
+The app will run at:
 
-To use the application, navigate to the interactive documentation at:
+```
+http://127.0.0.1:8000
+```
 
+For interactive API docs, open:
+
+```
 http://127.0.0.1:8000/docs
+```
 
+---
 
-Sample Document
+## 📑 Sample Document
 
-The system analyzes financial documents like Tesla’s Q2 2025 financial update.
+You can test the system with **Tesla’s Q2 2025 Financial Update**:
 
-To test with Tesla’s financial document:
+1. Download from: [Tesla Q2 2025 Update PDF](https://www.tesla.com/sites/default/files/downloads/TSLA-Q2-2025-Update.pdf)
+2. Save it as `data/sample.pdf` in the project folder
+3. Or upload any other financial PDF using the API
 
-Download Tesla Q2 2025 update from:
-Tesla Q2 2025 Update PDF
+---
 
-Save it as data/sample.pdf in the project directory
+## 🐛 Summary of Bugs Fixed
 
-Or upload any financial PDF through the API endpoint
+The project was debugged and brought to full functionality. Fixes include:
 
+1. **Invalid API Key & Setup**
 
-Summary of Bugs Fixed
+   * *Bug*: App hung due to placeholder API key
+   * *Fix*: Added `.env` file for secure key management
 
-1. Invalid API Key & Setup
-Bug: Application hung on startup due to placeholder API key.
-Fix: Added .env file for secure API key management and updated setup docs.
+2. **Faulty Agent & Task Logic**
 
-2. Faulty Agent & Task Logic
-Bug: All analysis tasks were assigned to a single agent.
-Fix: Re-assigned tasks to correct specialist agents (financial_analyst, investment_advisor, risk_assessor).
+   * *Bug*: All tasks assigned to one agent
+   * *Fix*: Properly distributed to `financial_analyst`, `investment_advisor`, and `risk_assessor`
 
-3. Incorrect CrewAI Syntax
-Bug: Used tool instead of tools in agent definitions, breaking file-reading.
-Fix: Corrected to tools, ensuring proper integration.
+3. **Incorrect CrewAI Syntax**
 
-4. Ineffective AI Prompts
-Bug: Prompts were satirical, producing random results.
-Fix: Rewritten to be professional, specific, and data-driven.
+   * *Bug*: Used `tool` instead of `tools`
+   * *Fix*: Corrected to ensure file-reader integration
 
+4. **Ineffective AI Prompts**
 
-Expected Features
+   * *Bug*: Prompts were satirical → produced random results
+   * *Fix*: Rewritten for **professional, data-driven outputs**
 
-✅ Upload financial documents (PDF format)
-✅ AI-powered financial analysis
-✅ Investment recommendations
-✅ Risk assessment
-✅ Market insights
+---
 
+## ✅ Expected Features
 
-Tech Stack
+* 📂 Upload financial documents (PDF format)
+* 🤖 AI-powered financial analysis
+* 💡 Investment recommendations
+* ⚠️ Risk assessment
+* 📊 Market insights
 
-- Backend: FastAPI
-- AI: Google Generative AI API
-- Orchestration: CrewAI
-- Server: Uvicorn
-- Language: Python 3.11+
+---
 
+## 🔄 Demo Workflow
 
-Status
+1. Upload a financial PDF
+2. **Financial Analyst** → Extracts ratios, evaluates performance
+3. **Investment Advisor** → Provides investment recommendations
+4. **Risk Assessor** → Highlights risks & mitigation strategies
+5. Consolidated results returned as structured insights
 
-🚀 The project is fully debugged, functional, and production-ready.
+---
+
+## 📸 Screenshots
+
+### 1. API Documentation
+
+![API Docs]()
+
+### 2. Analysis Results
+
+![Results]()
+
+---
+
