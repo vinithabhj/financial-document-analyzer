@@ -123,11 +123,11 @@ The project was debugged and brought to full functionality. Fixes include:
 
 ### 1. API Documentation
 
-![API Docs]()
+![API Docs](outputs/Screenshot (260).png)
 
 ### 2. Analysis Results
 
-![Results]()
+![Results](outputs/Screenshot (261).png)
 
 ---
 
